@@ -46,7 +46,7 @@ function App({ onSearchChange, searchField, robots, onRequestRobots, isPending }
         return robot.name.toLowerCase().includes(searchField.toLowerCase())
     })
 
-    return !robots.length ?
+    return isPending ?
     <h1>Loading...</h1> :
     (
         <div className='tc'>
